@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- extra310@gmail.com-->
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <link href="favicon.ico" rel="SHORTCUT ICON">
+  <title>祥竑電子股份有限公司</title>
+   
+     <script language="javascript" src="photo/jquery-1.4.3.js"></script>
+<script language="javascript">
+$(function(){
+	// 先取得 #abgne-block-20110111
+	var $block = $('#abgne-block-20110111');
+ 
+	// 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
+	$('#abgne-block-20110111 .title ul li').hover(function(){
+		// 當滑鼠移上時加上 .over 樣式
+		$(this).addClass('over').siblings('.over').removeClass('over');
+	}, function(){
+		// 當滑鼠移出時移除 .over 樣式
+		$(this).removeClass('over');
+	}).click(function(){
+		// 當滑鼠點擊時, 顯示相對應的 div.info
+		// 並加上 .on 樣式
+		var $this = $(this);
+		$this.add($('.bd div.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+	});
+});
+
+
+$(function(){
+	// 先取得 #abgne-block-20110111 , 必要參數及輪播間隔
+	var $block = $('#abgne-block-20110111'), 
+		timrt, speed = 3000;
+ 
+	// 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
+	var $li = $('.title ul li', $block).hover(function(){
+		// 當滑鼠移上時加上 .over 樣式
+		$(this).addClass('over').siblings('.over').removeClass('over');
+	}, function(){
+		// 當滑鼠移出時移除 .over 樣式
+		$(this).removeClass('over');
+	}).click(function(){
+		// 當滑鼠點擊時, 顯示相對應的 div.info
+		// 並加上 .on 樣式
+		var $this = $(this);
+		$this.add($('.bd div.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+	});
+ 
+	// 幫 $block 加上 hover() 事件
+	$block.hover(function(){
+		// 當滑鼠移上時停止計時器
+		clearTimeout(timer);
+	}, function(){
+		// 當滑鼠移出時啟動計時器
+		timer = setTimeout(move, speed);
+	});
+ 
+	// 控制輪播
+	function move(){
+		var _index = $('.title ul li.on', $block).index();
+			_index = (_index - 1) % $li.length;
+		$li.eq(_index).click();
+ 
+		timer = setTimeout(move, speed);
+	}
+ 
+	// 啟動計時器
+	timer = setTimeout(move, speed);
+});
+</script>
+
+<style type="text/css">
+body{
+	font-size: ;
+	margin-left: 0px;
+	margin-top: 15px;
+}
+ul, li, h3, p{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a img {
+	bordeR: none;
+	vertical-align:middle;
+}
+.gray13 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 13px;
+	line-height: 18px;
+	color: #3D3D3D;
+	padding-left: 10px;
+}
+#abgne-block-20110111 {
+	width: 327px;
+	border: 1px solid #fff;
+}
+#abgne-block-20110111 .info {
+	display: none;
+}
+#abgne-block-20110111 .on {
+	display: block;
+}
+#abgne-block-20110111 .title {
+	border-top: 1px solid #ffffff;
+}
+#abgne-block-20110111 .title li {
+	cursor: pointer;
+	float: right;
+	width: 5px;
+	background-color: #E6B4B4;
+	border-right: 1px solid #FFFFFF;
+	height: 10px;
+	padding: 2px 5px 4px;
+}
+#abgne-block-20110111 .title li.on, #abgne-block-20110111 .title li.over {
+	background-color: #B31B1B;
+	border-right: 1px solid #FFFFFF;
+}
+#abgne-block-20110111 .title li h3 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #000000;
+	padding-bottom: 2px;
+}
+#abgne-block-20110111 .title li p{
+	font-size: 12px;
+	color: #ccc;
+}
+#abgne-block-20110111 .title li.on h3, #abgne-block-20110111 .title .over h3, #abgne-block-20110111 .title li.on p, #abgne-block-20110111 .title .over p {
+	color: #fff;
+}
+</style>   
+      
+  <style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	
+}
+#bgall {
+	background-image: url(bg.jpg);
+}
+body{
+	font-size:15px;
+	background:url(images/bg.gif);
+	font-family:Arial, Helvetica, sans-serif;
+	background-image: url(bg.jpg);
+	background-repeat: repeat-x;
+	background-color: #D0D0D0;
+}
+h1{
+	width:736px; 
+	height:50px; 
+	
+}
+.nav{
+	list-style:none;
+	padding-top:2px;
+	width:736px;
+	height:41px;
+	margin:30px auto;
+	position:relative;
+}
+#backimage {
+	background-image: url(bg.jpg);
+}
+.nav li{
+	float:left;
+	margin:0 1px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.nav a{
+	border-top:solid 1px #999;
+	display:block;
+	color:#09F;
+	text-decoration:none;
+	line-height:40px;
+	padding:0 1em;
+	position:relative;
+	background-image: url(titlebg.jpg);
+	background-repeat: no-repeat;
+}
+.nav a:hover{
+	color:#39F;
+	text-align: center;
+}
+.nav a:hover span{ display:block; width:0; height:0; border:solid 7px #EEE; border-color:transparent transparent #EEE transparent; position:absolute; bottom:0; left:45%;}
+.nav ul{
+	display:none;
+	list-style:none;
+	position:absolute;
+	left:0px;
+	width:100%;
+	background-color: #FFF;
+	background-image: url(low.jpg);
+}
+#footer {
+	padding-top:0px;
+	width:736px;
+	height:80px;
+	background-color: #333;
+	color: #FFF;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.nav li li{ margin:0;}
+.nav li:hover ul{
+	display:block;
+}
+.nav ul a{
+	border:0;
+	padding:0 .5em;
+	text-shadow:none;
+	background-color: #FFF;
+	background-image: url(low.jpg);
+	background-repeat: repeat;
+}
+#header {
+	width:736px;
+	height:113px;
+	margin:10px auto;
+}
+#content {
+	padding-top:0px;
+	width:736px;
+	height:730px;
+	margin:10px auto;
+	background-color: #FFF;
+}
+.nav ul a:hover{
+	text-decoration:underline;
+	color:#3CF;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.b1:hover{ border-color:#F00}
+.b2:hover{ border-color:#F90}
+.b3:hover{ border-color:#FF0;}
+.b4:hover{ border-color:#0C0;}
+.b5:hover{ border-color:#6CF;}
+.b6:hover{ border-color:#63F;}
+.b7:hover{ border-color:#F0F;}
+.b8:hover{
+	border-color:#03F;
+}
+  #header .nav li .b3 {
+	text-align: left;
+}
+  </style>
+     
+  </head>
+    
+  <body>
+
+    
+  <div id="header"> 
+  <table align="right">
+  <tr align="right">
+  <td>
+  <a href="../index.htm">繁體中文</a>
+  </td>
+  <td>|</td>
+  <td>
+  <a href="index.htm">English</a>
+  </td>
+  </tr>
+  </table>
+    <h1><img src="title3.png" width="500" height="100" longdesc="index.htm" /></h1>
+    <ul class="nav">
+    <li><a href="introduct.htm" class="b1">About Us<span></span></a>
+      <ul>
+        <li><a href="introduct.htm">General Information
+</a></li>
+        <li><a href="organize.htm">Organization Chart</a></li>
+        <li><a href="revenue.htm">Sales Revenue </a></li>
+      </ul>
+    </li>
+    <li><a href="product.htm" class="b2">Products<span></span></a>
+  <ul>
+    <li><a href="productrange.htm">Main Products</a></li>
+    <li><a href="advance.htm">Competitive Advantage</a></li>
+    <li><a href="customer.htm">Sales & Layers Distribution</a></li>
+    <li><a href="maincustomer.htm">Key Customers
+</a></li>
+    </ul>
+    </li>
+    <li><a href="sale.htm" class="b3">　Sales　<span></span> </a>
+      <ul>
+	<li><a href="caseprocess.htm">Outsourcing Control Process
+</a></li>
+    <li><a href="qc.htm">Equipments</a></li>
+
+    </ul>
+    </li>
+    <li><a href="productporcess.htm" class="b4">Capability<span></span></a>
+  <ul>
+    
+    <li><a href="processbility.htm">Production Capability</a></li>
+    <li><a href="factoryprocess.htm">In House Production</a></li>
+
+    </ul>
+    </li>
+    
+    <li><a href="partner.htm" class="b5">&nbsp;Partner&nbsp;<span></span></a>
+      <ul>
+    <li><a href="emc.htm">EMC</a></li>
+    <li><a href="emcpro.htm">CCL Property
+</a></li>
+    <li><a href="emcmanu.htm">Manufacturing Equipment</a></li>
+    <li><a href="emcwwoem.htm">Worldwide OEM Approval</a></li>
+    </ul>
+    </li> 
+
+      
+    <li><a href="qcauth.htm" class="b6">&nbsp; Quality&nbsp; <span></span></a></li>
+    <li><a href="contactus.htm" class="b7">Contact Us<span></span></a></li>
+    <li><a href="index.htm" class="b8">Home<span></span></a></li>
+  </ul> 
+
+  </div>
+  <div id="content">
+  
+  <br /><br />
+  <table width="100%" height="30%">
+  <tr>
+  <td> <img src="bgbgbg.jpg" /></td>
+  </tr>
+  </table>
+  <br />
+  <table width="100%" height="50%">
+  <tr align="left">
+  <td height="250" width="383"><strong>
+  <h2>HSIANG HUNG electronics：</h2>
+  <BR />
+
+  &nbsp;&nbsp;              We provide wide range of different PCB. From single sided board up to 18L rigid board, MCPCB (Single & Double), and HDI Board.
+
+<BR />
+
+  &nbsp;&nbsp;              For the past ten years, we constantly strive in our business and obtained UL and ISO9001 certification in 2006. In 2008, we got TS16949 certification and expected to obtain a thick copper 5oz certification in March 2013. In this coming year, HSIANG HUNG will provide our customer the most competitive product that other competitors cannot produce. (Such as the unequal constructions 2L+8L or 4L+4L, these provide LED industry or other industry the one piece production, it can reach the biggest size 520mm*1200mm.) 
+
+
+<BR />
+&nbsp;&nbsp;                Also, we provide service for in time response in quotes, quality issue, and on time shipment etc. Stable human resource with experienced PCB talents. advantageous geographic position for speedy transportation, 30 min. to Taoyuan International Airport and 20 min. to Taoyuan Port.
+<BR />
+                &nbsp;&nbsp; Our only goal is satisfy our customer. No matter what task our customer asked, the task was our target, and we always reach the target. 
+<BR />
+
+
+  &nbsp;&nbsp;<BR /></strong>
+
+</td>
+  <td height="250" width="341" align="right">
+  Products
+  
+    <div id="abgne-block-20110111">
+		<div class="bd">
+			<div class="info">
+<table width="327" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/5.jpg" width="200" height="244"></a></td>
+  </tr>
+  
+</tbody></table>
+    
+   
+			</div>
+			<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/4.jpg" width="326" height="244"></a></td>
+  </tr>
+ 
+</tbody></table>
+
+   
+			</div>
+			<div class="info on">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/1.jpg" width="300" height="225"></a></td>
+  </tr>
+
+</tbody></table>
+
+    
+			</div>
+						<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><a href="product.htm"><img src="photo/2.jpg" width="326" height="244"></a></td>
+  </tr>
+
+</tbody></table>
+
+    
+			</div>
+						<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><a href="product.htm"><img src="photo/3.jpg" width="326" height="244"></a></td>
+  </tr>
+  
+</tbody></table>
+
+    
+			</div>
+			
+		<table width="326" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><a href="product.htm"><img src="photo/intex-adbg.gif" width="326" height="10"></a></td>
+      </tr>
+    </tbody></table>
+			<div class="title">
+				<ul>
+					<li class=""><h3>5</h3>
+				  </li>
+					<li class=""><h3>4</h3>
+					</li>
+					<li class="on"><h3>3</h3>
+					</li>
+					<li class=""><h3>2</h3>
+					</li>
+					<li class=""><h3>1</h3>
+					</li>										
+				</ul>
+			</div>
+		</div>
+	</div>
+    
+  </td>
+  </tr>
+  
+  </table>
+  
+  
+  
+  </div>
+  
+  <div id="footer">
+ <table align="center" width="100%">
+<tr align="center">
+<td>
+Address：NO.1-1.KUNG YEH 12RD PING CHEN IND ZONE PING CHEN,<br />TAOYUAN HSIEN ,TAIWAN R.O.C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+<tr align="center"><td>
+TEL： +886-3-4193073 &nbsp;&nbsp;&nbsp;&nbsp;
+FAX： +886-3-4193060 </td></tr>
+<tr align="center"><td>
+COPYRIGHT ⓒ 2012  HSIANG HUNG Electronics Co., LTD.
+ All RIGHTS.</td></tr>
+</table>
+  </div>
+  
+  </body>
+</html>
+</div>

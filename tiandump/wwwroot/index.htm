@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- extra310@gmail.com -->
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
+  <link href="favicon.ico" rel="SHORTCUT ICON">
+  <title>祥竑電子股份有限公司</title>
+      
+      
+      <script language="javascript" src="./photo/jquery-1.4.3.js"></script>
+<script language="javascript">
+$(function(){
+	// 先取得 #abgne-block-20110111
+	var $block = $('#abgne-block-20110111');
+ 
+	// 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
+	$('#abgne-block-20110111 .title ul li').hover(function(){
+		// 當滑鼠移上時加上 .over 樣式
+		$(this).addClass('over').siblings('.over').removeClass('over');
+	}, function(){
+		// 當滑鼠移出時移除 .over 樣式
+		$(this).removeClass('over');
+	}).click(function(){
+		// 當滑鼠點擊時, 顯示相對應的 div.info
+		// 並加上 .on 樣式
+		var $this = $(this);
+		$this.add($('.bd div.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+	});
+});
+
+
+$(function(){
+	// 先取得 #abgne-block-20110111 , 必要參數及輪播間隔
+	var $block = $('#abgne-block-20110111'), 
+		timrt, speed = 3000;
+ 
+	// 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
+	var $li = $('.title ul li', $block).hover(function(){
+		// 當滑鼠移上時加上 .over 樣式
+		$(this).addClass('over').siblings('.over').removeClass('over');
+	}, function(){
+		// 當滑鼠移出時移除 .over 樣式
+		$(this).removeClass('over');
+	}).click(function(){
+		// 當滑鼠點擊時, 顯示相對應的 div.info
+		// 並加上 .on 樣式
+		var $this = $(this);
+		$this.add($('.bd div.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+	});
+ 
+	// 幫 $block 加上 hover() 事件
+	$block.hover(function(){
+		// 當滑鼠移上時停止計時器
+		clearTimeout(timer);
+	}, function(){
+		// 當滑鼠移出時啟動計時器
+		timer = setTimeout(move, speed);
+	});
+ 
+	// 控制輪播
+	function move(){
+		var _index = $('.title ul li.on', $block).index();
+			_index = (_index - 1) % $li.length;
+		$li.eq(_index).click();
+ 
+		timer = setTimeout(move, speed);
+	}
+ 
+	// 啟動計時器
+	timer = setTimeout(move, speed);
+});
+</script>
+
+<style type="text/css">
+body{
+	font-size: ;
+	margin-left: 0px;
+	margin-top: 15px;
+}
+ul, li, h3, p{
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a img {
+	bordeR: none;
+	vertical-align:middle;
+}
+.gray13 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 13px;
+	line-height: 18px;
+	color: #3D3D3D;
+	padding-left: 10px;
+}
+#abgne-block-20110111 {
+	width: 327px;
+	border: 1px solid #fff;
+}
+#abgne-block-20110111 .info {
+	display: none;
+}
+#abgne-block-20110111 .on {
+	display: block;
+}
+#abgne-block-20110111 .title {
+	border-top: 1px solid #ffffff;
+}
+#abgne-block-20110111 .title li {
+	cursor: pointer;
+	float: right;
+	width: 5px;
+	background-color: #E6B4B4;
+	border-right: 1px solid #FFFFFF;
+	height: 10px;
+	padding: 2px 5px 4px;
+}
+#abgne-block-20110111 .title li.on, #abgne-block-20110111 .title li.over {
+	background-color: #B31B1B;
+	border-right: 1px solid #FFFFFF;
+}
+#abgne-block-20110111 .title li h3 {
+	font-family: "Arial", "Helvetica", "sans-serif";
+	font-size: 12px;
+	color: #000000;
+	padding-bottom: 2px;
+}
+#abgne-block-20110111 .title li p{
+	font-size: 12px;
+	color: #ccc;
+}
+#abgne-block-20110111 .title li.on h3, #abgne-block-20110111 .title .over h3, #abgne-block-20110111 .title li.on p, #abgne-block-20110111 .title .over p {
+	color: #fff;
+}
+</style>
+      
+      
+  <style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	
+}
+#bgall {
+	background-image: url(bg.jpg);
+}
+body{
+	font-size:15px;
+	background:url(images/bg.gif);
+	font-family:Arial, Helvetica, sans-serif;
+	background-image: url(bg.jpg);
+	background-repeat: repeat-x;
+	background-color: #D0D0D0;
+}
+h1{
+	width:736px; 
+	height:50px; 
+	
+}
+.nav{
+	list-style:none;
+	padding-top:2px;
+	width:736px;
+	height:41px;
+	margin:30px auto;
+	position:relative;
+}
+#backimage {
+	background-image: url(bg.jpg);
+}
+.nav li{ float:left; margin:0 1px;}
+.nav a{
+	border-top:solid 1px #999;
+	display:block;
+	color:#09F;
+	text-decoration:none;
+	line-height:40px;
+	padding:0 1em;
+	position:relative;
+	background-image: url(titlebg.jpg);
+	background-repeat: no-repeat;
+}
+.nav a:hover{
+	color:#39F;
+}
+.nav a:hover span{ display:block; width:0; height:0; border:solid 7px #EEE; border-color:transparent transparent #EEE transparent; position:absolute; bottom:0; left:45%;}
+.nav ul{
+	display:none;
+	list-style:none;
+	position:absolute;
+	left:0px;
+	width:100%;
+	background-color: #FFF;
+	background-image: url(low.jpg);
+}
+#footer {
+	padding-top:0px;
+	width:736px;
+	height:70px;
+	background-color: #333;
+	color: #FFF;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.nav li li{ margin:0;}
+.nav li:hover ul{
+	display:block;
+}
+.nav ul a{
+	border:0;
+	padding:0 .5em;
+	text-shadow:none;
+	background-color: #FFF;
+	background-image: url(low.jpg);
+	background-repeat: repeat;
+}
+#header {
+	width:736px;
+	height:113px;
+	margin:10px auto;
+}
+#content {
+	padding-top:0px;
+	width:736px;
+	height:730px;
+	margin:10px auto;
+	background-color: #FFF;
+}
+.nav ul a:hover{ 
+	text-decoration:underline;
+	color:#3CF;
+}
+
+.b1:hover{ border-color:#F00}
+.b2:hover{ border-color:#F90}
+.b3:hover{ border-color:#FF0;}
+.b4:hover{ border-color:#0C0;}
+.b5:hover{ border-color:#6CF;}
+.b6:hover{ border-color:#63F;}
+.b7:hover{ border-color:#F0F;}
+.b8:hover{
+	border-color:#03F;
+}
+  </style>
+     
+  </head>
+    
+  <body>
+
+    
+  <div id="header"> 
+  <table align="right">
+  <tr align="right">
+  <td>
+  <a href="index.htm">繁體中文</a>
+  </td>
+  <td>|</td>
+  <td>
+  <a href="eng/index.htm">English</a>
+  </td>
+  </tr>
+  </table>
+    <h1><img src="title3.png" width="500" height="100" longdesc="index.htm" /></h1>
+    <ul class="nav">
+    <li><a href="introduct.htm" class="b1">關於祥竑<span></span></a>
+      <ul>
+        <li><a href="introduct.htm">公司簡介</a></li>
+        <li><a href="organize.htm">公司組織圖</a></li>
+        <li><a href="revenue.htm">公司營業額</a></li>
+      </ul>
+    </li>
+    <li><a href="product.htm" class="b2">產品介紹<span></span></a>
+  <ul>
+    <li><a href="productrange.htm">產品範圍</a></li>
+    <li><a href="advance.htm">競爭優勢</a></li>
+    <li><a href="customer.htm">客戶來源與層別分布</a></li>
+    <li><a href="maincustomer.htm">主要客戶</a></li>
+    </ul>
+    </li>
+    <li><a href="sale.htm" class="b3">產品銷售<span></span></a>
+  <ul>
+	<li><a href="caseprocess.htm">外包管制流程</a></li>
+    <li><a href="qc.htm">品保實驗儀器</a></li>
+    <li><a href="productdd.htm">產品交期</a></li>
+    </ul>
+    </li>
+    <li><a href="productporcess.htm" class="b4">產品製程<span></span></a>
+  <ul>
+    
+    <li><a href="processbility.htm">製程能力</a></li>
+    <li><a href="factoryprocess.htm">廠內製程</a></li>
+    </ul>
+    </li>
+    
+    <li><a href="partner.htm" class="b5">合作夥伴<span></span></a></li>   
+    <li><a href="qcauth.htm" class="b6">品管認證<span></span></a></li>
+    <li><a href="contactus.htm" class="b7">聯絡我們<span></span></a></li>
+    <li><a href="index.htm" class="b8">回到首頁<span></span></a></li>
+  </ul> 
+
+  </div>
+  <div id="content">
+  
+  <br /><br />
+  <table width="100%" height="30%">
+  <tr>
+  <td> <img src="bgbgbg.jpg" /></td>
+  </tr>
+  </table>
+  <br />
+  <table width="100%" height="50%">
+  <tr align="left">
+  <td height="381" width="370"><strong><h2>祥竑電子：</h2><BR />
+
+  &nbsp;&nbsp;祥竑電子股份有限公司提供廣大多樣產品的印刷電路板，從單面板到18層板，鋁基板(單、雙面)，以及HDI 板。
+<BR />
+
+  &nbsp;&nbsp;這十幾年的時間,大家不斷的努力,在2006年取得 UL 及 ISO9001認證,2008年取得TS16949 認證,預計在2013年3月取得厚銅5OZ的認證,新的這年,祥竑將提供給最敬愛客戶目前市場上同業無法製作的產品(如:不對秤疊構，2L+8L 或 4L+4L，提供 LED 產業或其它產業大尺寸一體成型，最大尺寸 520mm*1200mm )。
+<BR />
+
+  &nbsp;&nbsp;    公司堅持24小時內即時回應專屬您的報價;48小時內回覆品質相關問題，還有堅持把關準確的交貨期限。公司擁有強大的組織團隊，及位於優勢的地理位址提供快速的運輸服務，到桃園國際機場只需30分鐘，到桃園港口只需20分鐘。
+<BR />
+
+  &nbsp;&nbsp;這些日子來,對於客戶所交代的任務,我們當作目標只有達成,挑戰極限、挑戰市場新產品。
+ <BR /></strong>
+
+</td>
+  <td height="381" width="354" align="right">
+  產品系列
+  
+  <div id="abgne-block-20110111">
+		<div class="bd">
+			<div class="info">
+<table width="327" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/5.jpg" width="200" height="244"></a></td>
+  </tr>
+  
+</tbody></table>
+    
+   
+			</div>
+			<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/4.jpg" width="326" height="244"></a></td>
+  </tr>
+ 
+</tbody></table>
+
+   
+			</div>
+			<div class="info on">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/1.jpg" width="326" height="244"></a></td>
+  </tr>
+
+</tbody></table>
+
+    
+			</div>
+						<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/2.jpg" width="326" height="244"></a></td>
+  </tr>
+
+</tbody></table>
+
+    
+			</div>
+						<div class="info">
+<table width="326" border="1" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td align="center"><a href="product.htm"><img src="photo/3.jpg" width="326" height="244"></a></td>
+  </tr>
+  
+</tbody></table>
+
+    
+			</div>
+			
+		<table width="326" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><a href="product.htm"><img src="photo/intex-adbg.gif" width="326" height="10"></a></td>
+      </tr>
+    </tbody></table>
+			<div class="title">
+				<ul>
+					<li class=""><h3>5</h3>
+				  </li>
+					<li class=""><h3>4</h3>
+					</li>
+					<li class="on"><h3>3</h3>
+					</li>
+					<li class=""><h3>2</h3>
+					</li>
+					<li class=""><h3>1</h3>
+					</li>										
+				</ul>
+			</div>
+		</div>
+	</div>
+    
+  </td>
+  </tr>
+  
+  </table>
+  
+  
+  
+  </div>
+  
+  <div id="footer">
+ <table align="center" width="100%">
+<tr align="center">
+<td>
+公司地址：桃園縣平鎮市平鎮工業區工業12路1-1號</td></tr>
+<tr align="center"><td>
+電話：+886-3-4193073 &nbsp;&nbsp;&nbsp;&nbsp;
+傳真：+886-3-4193060 </td></tr>
+<tr align="center"><td>
+COPYRIGHT ⓒ 2012  祥竑電子股份有限公司 All RIGHTS.</td></tr>
+</table>
+  </div>
+  
+  </body>
+</html>
+</div>

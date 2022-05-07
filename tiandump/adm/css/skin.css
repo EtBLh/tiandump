@@ -1,0 +1,281 @@
+/* body */
+body {
+	background-color: #EEF2FB;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+input {
+	width:300px
+}
+img{
+	border:0;
+	cursor:pointer;
+}/*刪除所有圖片邊框*/ 
+
+form{margin:0;} /*刪除表單往外間距*/
+
+.pixeltable { /*表格邊框變細*/
+border:1pt solid #ccdce4;
+}
+
+a:link, a:visited, a:active {
+    color:#000000;
+	text-decoration: none;
+}
+a:hover {
+    color:#999999;
+}
+td {font-Family:Verdana;font-size:12px}
+input,button,textarea,select,option{
+	font-family:inherit;
+	font-size:12px;
+	font-style:normal;
+	font-weight:inherit;
+}
+.gray {
+	color:black;
+	background-color: #f2f2f2;
+}
+
+
+
+.login_top_bg {
+	background-image: url("../images/login-top-bg.gif");
+	background-repeat: repeat-x;
+}
+.login_bg {
+	background-image: url("../images/login_bg.jpg");
+	background-repeat: repeat-x;
+}
+.login_bg2 {
+	background-image: url("../images/login-content-bg.gif");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.left_txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #666666;
+}
+.left_txt2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #000000;
+}
+.left_txt3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #003366;
+	text-decoration: none;
+}
+.login_txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	color: #333333;
+}
+.login_txt_bt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 25px;
+	color: #666666;
+	font-weight: bold;
+}
+.login-buttom-bg {
+	background-image: url("../images/login-buttom-bg.gif");
+	background-repeat: repeat-x;
+}
+.login-buttom-txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #ABCAD3;
+	text-decoration: none;
+	line-height: 20px;
+}
+
+
+.admin_txt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFFFFF;
+	text-decoration: none;
+	height: 38px;
+	width: 100%;
+	line-height: 38px;
+}
+.admin_topbg {
+	background-image: url("../images/top-right.gif");
+	background-repeat: repeat-x;
+}
+.titlebt {
+	font-size: 12px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url("../images/top_bt.jpg");
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: 15px;
+	padding-top: 5px;
+}
+
+.line_table {
+	border: 1px solid #CCCCCC;
+}
+.left_bt {
+	padding-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #395a7b;
+}
+.left_bt2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #333333;
+}
+
+.page_button_topdiv{
+	margin-top: 10px;
+	height:26px;
+	width:100%;
+	background-image: url("../images/content-bg.gif");
+}
+.page_button_buttomdiv{
+	height:26px;
+	width:100%;
+	background-image: url("../images/content-bg.gif");
+}
+
+.button_div{
+	width:30%;
+	padding-top: 5px;
+	text-align:left;
+	font-size:12px;
+	float:left
+}
+.button_div a{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.page_div{
+	width:40%;
+	padding-top: 5px;
+	padding-right: 10px;
+	text-align:right;
+	font-size:12px;
+	float:right
+}
+.page_div a{
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.list_table table {
+	border-collapse:collapse;
+	border:1px solid #DDDDDD;
+} 
+.list_table td {
+	height:26px;
+	border:#DDDDDD 1px solid;
+	
+}
+.detail_button{
+	width:100%;
+	padding-top: 15px;
+}
+
+.page_left_box{
+	background:url(../images/mail_leftbg.gif) repeat-y left 0px;
+	background-color: #F7F8F9;
+}
+.page_right_box{
+	background:url(../images/mail_rightbg.gif) repeat-y right 0px;
+}
+
+.box_head{
+	height:29px;
+	background:url(../images/content-bg.gif) repeat-x right 0px;
+}
+.box_head_left{
+	height:29px;
+	width:17px;
+	float:left;
+}
+.box_head_center{
+	height:29px;
+	float:left;
+	font-Family:Verdana;
+	font-size:12px;
+	padding-top:5px;
+}
+.box_head_right{
+	height:29px;
+	width:16px;
+	float:right;
+}
+.box_body{
+	margin:0 auto;
+	min-height:530px;/*IE6以上及其他瀏覽器識別*/
+	height:auto !important;/*ie6及其他瀏覽器識別為的就是忽略下面height:530*/
+	height:530px;
+	width:97%;
+	clear:both;
+}
+
+.box_footer{
+	height:17px;
+	background:url(../images/buttom_bgs.gif) repeat-x right 0px;
+}
+
+.box_footer_left{
+	height:17px;
+	width:17px;
+	float:left;
+}
+.box_footer_right{
+	height:17px;
+	width:16px;
+	float:right;
+}
+
+.photos_css{
+	width:80px;
+	height:80px;
+	text-align:center;
+	/*實現ff和ie7垂直居中*/
+	vertical-align:middle;
+	display:table-cell;
+}
+.photos_css img{/*實現等比縮放和ie6垂直居中*/
+	max-width:72px;
+	max-height:72px;
+	_width:expression((this.width>72&&this.width>this.height)?72 : true);
+	_height:expression((this.height>72) ? 72 : true);
+	_margin-top:expression((80-this.height)/2);
+}
+.photos_css2{
+	width:110px;
+	height:110px;
+	text-align:center;
+	/*實現ff和ie7垂直居中*/
+	vertical-align:middle;
+	display:table-cell;
+}
+.photos_css2 img{/*實現等比縮放和ie6垂直居中*/
+	max-width:100px;
+	max-height:100px;
+	_width:expression((this.width>100&&this.width>this.height)?100 : true);
+	_height:expression((this.height>100) ? 100 : true);
+	_margin-top:expression((110-this.height)/2);
+}
+
+/*相關商品css*/
+.photo-thumbs{ width:115px; height:100px; float:left; margin:0 5px 0 0;}
+.photo-thumbs img{ width:85px; height:85px; padding:3px; border:1px solid #ccc; background:#fff;}

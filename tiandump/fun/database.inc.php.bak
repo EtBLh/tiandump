@@ -1,0 +1,30 @@
+<?php
+if (! isset($sqlServerIp)){
+	$sqlServerIp = 'localhost';
+	$UserName = 'tiandump_db';
+	$Password = 'H+&p8(J%u0T#';
+	$DBName = 'tiandump_db';
+
+	if (@mysql_connect($sqlServerIp, $UserName, $Password)){
+		mysql_query("SET NAMES utf8");
+		if (! @mysql_select_db($DBName)){
+			exit("<script>alert('SQL Server connected , But database could not open')</script>");
+		}
+	}elseif ($_SERVER['HTTP_HOST'] == "localhost"){
+		$sqlServerIp = 'localhost';
+		$UserName = 'root';
+		$Password = 'eric123456';
+		$DBName = 'dumplingdb';
+		if (@mysql_connect($sqlServerIp, $UserName, $Password)){
+			mysql_query("SET NAMES utf8");
+			if (! @mysql_select_db($DBName)){
+				exit("<script>alert('SQL Server connected , But database could not open')</script>");
+			}
+		}else{
+			exit("<script>alert('Can not connect SQL Server')</script>");
+		}
+	}else{
+		exit("<script>alert('Can not connect SQL Server')</script>");
+	}
+}
+?>
